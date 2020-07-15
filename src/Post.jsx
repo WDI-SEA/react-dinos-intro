@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
 
+const blogs = {
+  blog1: {
+    postTitle: 'Dinosaurs are awesome'
+    
+  }
+}
+
 class Post extends Component {
   render() {
     return (
