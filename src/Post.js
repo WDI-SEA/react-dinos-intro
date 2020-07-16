@@ -8,11 +8,17 @@ class Post extends Component {
                 <p>{comment}</p>
             )
         })
+
+        const contents = this.props.content.map( (content, i) => {
+            return (
+                <p>{content}</p>
+            )         
+        })
         return (
             <div>
                 <h1>{this.props.postTitle}</h1>
                 <h2>By: {this.props.author}</h2>
-                <p>{this.props.content}</p>
+                <p>{contents}</p>
                 <h3>Comments:</h3>
                 <p>{comments}</p>
             </div>

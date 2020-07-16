@@ -12,7 +12,8 @@ const blogContent = [{
   author: 
     "Stealthy Stegosaurus",
   content: [
-    "Check out this body property!"
+    "Check out this body property!",
+    "Lookin good dinos"
   ],
   comments: [
     "first!",
