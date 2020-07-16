@@ -1,21 +1,19 @@
 import React, { Component } from 'react';
 
-const blogs = {
-  blog1: {
-    postTitle: 'Dinosaurs are awesome'
-    
-  }
-}
-
 class Post extends Component {
   render() {
+    const comments = this.props.post.comments.map((comment, key) => {
+      return <p key={ key }>{ comment  }</p>
+    })
     return (
       <div>
-        <h1>Post Title</h1>
-        <h5>Post Author</h5>
-        <p>Post Content</p>
+        <hr />
+        <h1>{ this.props.post.title }</h1>
+        <h5>{ this.props.post.author }</h5>
+        <p>{ this.props.post.content }</p>
         <h3>Comments:</h3>
-        <p>comment text</p>
+        { comments }
+        <hr />
       </div>
     );
   }
