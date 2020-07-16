@@ -1,26 +1,57 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Post from './Post'
 
-function App() {
+
+
+
+const blogContent = [{
+  title: 
+    "Dinosaurs are awesome",
+  author: 
+    "Stealthy Stegosaurus",
+  content: [
+    "Check out this body property!"
+  ],
+  comments: [
+    "first!",
+    "second"
+  ]
+}]
+
+//  {
+//   title: 
+//     "Dinosaurs are awesome",
+//   author: 
+//     "Stealthy Stegosaurus",
+//   content: [
+//     "Check out this body property!"
+//   ],
+//   comments: [
+//     "first!"
+//   ]
+// }]
+
+class App extends Component {
+
+  render() {
+    const posts = blogContent.map((post, i) => {
+      return (
+        <Post 
+        postTitle={blogContent[i].title}
+        author={blogContent[i].author}
+        content={blogContent[i].content}
+        comments={blogContent[i].comments}
+      />
+      )
+    })
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {posts}
     </div>
   );
+  }
 }
 
 export default App;
