@@ -4,17 +4,20 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-const content = [
-  'Check out this body property!'
-]
-
-const comments = [
-  'First!'
-]
+const post = {
+  postTitle: 'Dinosaurs are awesome',
+  author: 'Stealthy Stegosaurus',
+  content: [
+    'Check out this body property!'
+  ],
+  comments: [
+    'First!'
+  ]
+}
 
 ReactDOM.render(
   <React.StrictMode>
-    <App content={content} comments={comments} />
+    <App post={post} />
   </React.StrictMode>,
   document.getElementById('root')
 );

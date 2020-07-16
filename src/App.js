@@ -7,10 +7,10 @@ class App extends Component {
     return (
       <div className="App">
         <Post
-          postTitle={'Dinosaurs are awesome'}
-          author={'Stealthy Stegosaurus'}
-          content={this.props.content}
-          comments={this.props.comments} 
+          postTitle={this.props.post.postTitle}
+          author={this.props.post.author}
+          content={this.props.post.content}
+          comments={this.props.post.comments} 
         />
       </div>
     )
