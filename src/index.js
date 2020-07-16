@@ -4,9 +4,17 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+const content = [
+  'Check out this body property!'
+]
+
+const comments = [
+  'First!'
+]
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App content={content} comments={comments} />
   </React.StrictMode>,
   document.getElementById('root')
 );
