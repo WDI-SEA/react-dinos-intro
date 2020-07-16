@@ -4,18 +4,16 @@ import './App.css';
 import Post from './Post'
 import { render } from '@testing-library/react';
 
-let details = [
+let details = 
   {
   'postTitle': 'Dinosaurs are awesome',
   'author': 'Stealthy Stegosaurus',
   'content': 'Check out this body property',
-  'comments': 'First'
+  'comments': ['First']
   }
-]
 
-class App extends Component {
-  
-  render() {
+
+function App() {
     return (
       <div className="App">
         <Post title={details.postTitle} 
@@ -25,6 +23,6 @@ class App extends Component {
       </div>
     );
   }
-}
+
 
 export default App;
