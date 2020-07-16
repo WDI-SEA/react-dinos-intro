@@ -1,14 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
-import Post from './Post';
+import Post from './Post'
 
-function App() {
+
+const blogContent = [{
+  title: 
+    "Dinosaurs are awesome",
+  author: 
+    "Stealthy Stegosaurus",
+  content: [
+    "Check out this body property!",
+    "Mapping is hard"
+  ],
+  comments: [
+    "First Comment!",
+    "Second Comment "
+  ]
+}]
+
+class App extends Component {
+
+  render() {
+    const posts = blogContent.map((post, i) => {
+      return (
+        <Post 
+        postTitle={blogContent[i].title}
+        author={blogContent[i].author}
+        content={blogContent[i].content}
+        comments={blogContent[i].comments}
+      />
+      )
+    })
   return (
     <div className="App">
-      <Post postTitle={"Dinosaurs are awesome"} author={"Stealthy Stegosaurus"} content={"Check out this body property!"} comments={"First!"}/>
+      {posts}
     </div>
   );
+  }
 }
 
 export default App;
