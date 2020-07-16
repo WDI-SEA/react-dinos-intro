@@ -4,9 +4,16 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+const post = {
+  postTitle: "Dinos are awesome 🔥",
+  author: "by Feathered Raptor 🌊",
+  content: ["Check out this body property bud🌊"],
+  comments: ["First comment 🌊"]
+}
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App post={post}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
