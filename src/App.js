@@ -5,8 +5,8 @@ import posts from './posts';
 
 
 function App() {
-  const renderedPosts = posts.map((post, key) => {
-    return <Post post={ post } key={ key }/>
+  const renderedPosts = posts.map((post) => {
+    return <Post post={ post }/>
   })
   return (
     <div className="App">
