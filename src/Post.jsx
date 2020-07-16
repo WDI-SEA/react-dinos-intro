@@ -10,7 +10,7 @@ class Post extends Component {
                 <h2>By {this.props.post[0].author}</h2>
                 <p>{this.props.post[0].content}</p>
                 <h1>Comments:</h1>
-                <h5>{this.props.post[0].content}</h5>
+                <h5>{this.props.post[0].comment}</h5>
             </div>
         );
     }
