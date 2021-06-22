@@ -1,5 +1,3 @@
-#### This is the solutions branch for SEI29 - consult at your own risk. 
-
 ## Available Scripts
 
 In the project directory, you can run:
